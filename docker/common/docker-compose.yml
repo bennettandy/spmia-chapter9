@@ -88,6 +88,8 @@ services:
     ports:
       - 2181:2181
       - 9092:9092
+   
+
 #  This is the openzipkin server.
   # zipkin:
   #   image: openzipkin/zipkin
@@ -96,6 +98,6 @@ services:
   #Attention:  Replace the value in the “command” attribute with the value supplied to you from Papertrail
   logspout:
     image: gliderlabs/logspout
-    command: syslog://192.168.0.120:9200
+    command: syslog+tcp://192.168.0.120:9200
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
