@@ -98,6 +98,6 @@ services:
   #Attention:  Replace the value in the “command” attribute with the value supplied to you from Papertrail
   logspout:
     image: gliderlabs/logspout
-    command: syslog+tcp://192.168.0.120:9200
+    command: tcp://192.168.0.120:5000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
